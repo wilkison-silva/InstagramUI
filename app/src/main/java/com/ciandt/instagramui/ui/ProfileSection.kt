@@ -12,24 +12,34 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ProfileSection() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceAround
-
+    Column(
+        modifier = Modifier.fillMaxWidth()
     ) {
-        RoundedImage(modifier = Modifier.weight(3f))
         Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceAround,
-            modifier = Modifier.weight(7f)
+            horizontalArrangement = Arrangement.SpaceAround
+
         ) {
-            ProfileStat(number = "601", text = "Posts")
-            ProfileStat(number = "99.8K", text = "Followers")
-            ProfileStat(number = "72", text = "Following")
+            RoundedImage(modifier = Modifier.weight(3f))
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceAround,
+                modifier = Modifier.weight(7f)
+            ) {
+                ProfileStat(number = "601", text = "Posts")
+                ProfileStat(number = "99.8K", text = "Followers")
+                ProfileStat(number = "72", text = "Following")
+            }
         }
+        Spacer(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(10.dp)
+        )
+        ProfileDescription()
     }
 }
 
