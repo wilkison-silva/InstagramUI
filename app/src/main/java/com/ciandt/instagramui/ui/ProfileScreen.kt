@@ -29,6 +29,12 @@ fun ProfileScreen() {
                 .height(5.dp)
         )
         ProfileSection()
+        Spacer(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(5.dp)
+        )
+        ButtonSection()
     }
 }
 
