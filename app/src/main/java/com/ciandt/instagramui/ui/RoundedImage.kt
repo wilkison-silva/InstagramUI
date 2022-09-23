@@ -1,5 +1,6 @@
 package com.ciandt.instagramui.ui
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.aspectRatio
@@ -18,10 +19,11 @@ import com.ciandt.instagramui.R
 @Composable
 fun RoundedImage(
     size: Dp = 100.dp,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    @DrawableRes imageRes: Int
 ) {
     Image(
-        painter = painterResource(id = R.drawable.philipp),
+        painter = painterResource(id = imageRes),
         contentDescription = null,
         modifier = modifier
             .size(size)

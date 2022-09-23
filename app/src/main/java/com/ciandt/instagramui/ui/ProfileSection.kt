@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ciandt.instagramui.R
 
 @Composable
 fun ProfileSection() {
@@ -23,7 +24,10 @@ fun ProfileSection() {
             horizontalArrangement = Arrangement.SpaceAround
 
         ) {
-            RoundedImage(modifier = Modifier.weight(3f))
+            RoundedImage(
+                modifier = Modifier.weight(3f),
+                imageRes = R.drawable.philipp
+            )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceAround,
